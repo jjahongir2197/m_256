@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Mini CRUD</h2>
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Add user">
+    <button>Add</button>
+</form>
+
+<ul>
+{% for u in users %}
+    <li>
+        {{ u }} <a href="/delete/{{u}}">Delete</a>
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
